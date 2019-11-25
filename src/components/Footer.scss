@@ -1,0 +1,65 @@
+@import '../import/forFlexBox.scss';
+
+.footer-wrapper {
+    width: 100%;
+    padding: 30px;
+    background-color: #1f2124;
+    box-sizing: border-box;
+
+    .footer {
+        @include flex-box(column, flex-start, flex-start);
+        width: 70%;
+        margin: 0 auto;
+
+        .footer-block {
+            @include flex-box(row, space-around, flex-start);
+            width: 100%;
+
+            .limitation {
+                width: 30px;
+                padding: 3px;
+                color: #fff;
+                background-color: #f2360c;
+                border-radius: 20px;
+                box-sizing: border-box;
+                font-size: 11px;
+                text-align: center;
+            }
+
+            .copyriting {
+                width: 70%;
+                color: #414346;
+                font-size: 12px;
+                border-bottom: 1px solid #27282c;
+            }
+
+            .footer-cookies {
+                color: #414346;
+                font-size: 12px;
+                width: 67%;
+                margin-top: 10px;
+            }
+        }
+
+        .footer-nav {
+            @include flex-box(row, flex-start, flex-start);
+            color: #c5c6c6;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #27282c;
+
+            .footer-item {
+                margin-right: 10px;
+
+                &:hover {
+                    color: #f2360c;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

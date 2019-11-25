@@ -1,0 +1,109 @@
+@import '../../import/forFlexBox.scss';
+
+.news {
+    @include flex-box(row, flex-start, flex-start);
+    width: 94%;
+    margin: 40px 40px 20px 40px;
+    overflow: hidden;
+
+    .nav-news {
+        width: 24%;
+        border: 2px solid #e9ebee;
+        padding: 15px 15px 15px 0px;
+        margin-right: 20px;
+
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 20px 20px 20px 10px;
+        }
+
+        .news-sidebar {
+            @include flex-box(column, flex-start, flex-start);
+            margin: 15px 0px 0px 15px;
+            height: 70vh;
+            overflow: hidden;
+
+            .news-item {
+                width: 100%;
+                padding: 10px 0 10px 0;
+                border-bottom: 1px solid #e9ebee;
+
+                .news-timing {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .news-naming {
+                    margin: 0 0px 0 5px;
+                }
+
+                .news-info {
+                    font-weight: normal;
+                    text-align: left;
+                    text-transform: unset;
+                    word-wrap: break-word;
+                }
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    border-bottom: 0px solid #fff;
+                }
+            }
+        }
+    }
+
+    .content {
+        @include flex-box(row, space-between, flex-start);
+        flex-flow: wrap;
+        width: 80%;
+
+        .content-item {
+            @include flex-box(column, space-around, flex-start);
+            width: 30%;
+            display: inline-block;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+            }
+
+            .rubric {
+                text-align: left;
+                font-weight: bold;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+
+            .heading {
+                word-wrap: break-word;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .text {
+                word-wrap: break-word;
+                font-size: 15px;
+                color: #787878;
+                margin-top: 10px;
+            }
+
+            &:hover {
+                box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.08);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.bookmark {
+    transform: rotate(270deg);
+    color: #ff761a;
+}

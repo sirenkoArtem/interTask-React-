@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import Header from './components/Header'
+import Navbar from './components/Navbar'
+import News from './components/componentsForNavbar/news'
+import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <BrowserRouter>
+        <Header />
+        <Navbar />
+        <Route path="/news" render={ () => <News /> } />
+        {/* <Route path="/city" render={ () => <City /> } />
+        <Route path="/business" render={ () => <Business /> } />
+        <Route path="/style" render={ () => <Style /> } />
+        <Route path="/culture" render={ () => <Culture /> } />
+        <Route path="/food" render={ () => <Food /> } />
+        <Route path="/knowledge" render={ () => <Knowledge /> } />
+        <Route path="/children" render={ () => <Children /> } />
+        <Route path="/kyiv" render={ () => <Kyiv /> } /> */}
+      </BrowserRouter>
+      <Footer />
     </div>
   );
 }

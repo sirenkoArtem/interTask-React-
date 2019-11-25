@@ -1,0 +1,18 @@
+.location {
+    @include flex-box(row, flex-start, flex-start);
+    margin-bottom: 5px;
+
+    .location-name {
+        font-weight: bold;
+    }
+
+    .location-weather {
+        margin: 0px 6px 0px 10px;
+        color: #ff761a;
+        font-size: 18px;
+    }
+
+    .location-temperature {
+        font-size: 18px;
+    }
+}

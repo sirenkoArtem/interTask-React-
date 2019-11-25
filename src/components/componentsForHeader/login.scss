@@ -1,0 +1,24 @@
+.login {
+
+    button {
+        background-color: #399c72;
+        border-radius: 20px;
+        text-align: center;
+        padding: 8px 16px 8px 16px;
+        border-width: 0;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: .5px;
+        outline: 0;
+        font-family: system-ui;
+
+        transition-duration: .5s;
+
+        &:hover {
+            background-color: #2e7858;
+        }
+    }
+}

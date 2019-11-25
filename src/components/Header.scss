@@ -1,0 +1,30 @@
+@import '../import/forFlexBox.scss';
+@import './componentsForHeader/location.scss';
+@import './componentsForHeader/login.scss';
+
+.header {
+    @include flex-box(column, flex-start, flex-start);
+    margin: 70px 40px 20px 40px;
+
+    .active {
+        color: blue;
+    }
+
+    .top-header {
+        @include flex-box(row, space-between, flex-start);
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .line-wrapper {
+        @include flex-box(row, space-between, flex-start);
+        width: 100%;
+
+        .line {
+            display: inline-block;
+            border: 1px solid #e9ebee;
+            width: 45%;
+            background-color: #e9ebee;
+        }
+    }
+}

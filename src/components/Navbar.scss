@@ -1,0 +1,25 @@
+@import '../import/forFlexBox.scss';
+
+.navbar {
+    @include flex-box(row, space-between, flex-start);
+    width: 94%;
+    margin: 0 auto;
+
+    .menu-bar {
+        font-stretch: ultra-expanded;
+    }
+
+    .navbar-menu {
+        @include flex-box(row, space-between, flex-start);
+        width: 60%;
+    }
+
+    .navbar-item {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .active {
+        color: #16b096;
+    }
+}
